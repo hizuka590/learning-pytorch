@@ -1,3 +1,4 @@
 *.yml
 .idea
 .ipynb_checkpoints
+*.jovianrc
