@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="216d00c6-a449-4b05-8bce-de0df92b5574" name="Changes" comment="" />
+    <list default="true" id="216d00c6-a449-4b05-8bce-de0df92b5574" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/02-insurance-linear-regression/02-insurance-linear.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/02-insurance-linear-regression/02-insurance-linear.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataviz-cheatsheet/data-visualization-guide.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/dataviz-cheatsheet/data-visualization-guide.ipynb" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
