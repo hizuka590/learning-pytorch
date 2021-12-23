@@ -2,4 +2,7 @@
 .idea
 .ipynb_checkpoints
 *.jovianrc
-data/:
+data/
+*.tgz
+*.tgz.gz
+*.pth
