@@ -5,8 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="216d00c6-a449-4b05-8bce-de0df92b5574" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/vision_transformer/cat.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vision_transformer/classes.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vision_transformer/custom.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vision_transformer/forward.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vision_transformer/verify.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/06-mnist-gan/06-mnist-gan.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/06-mnist-gan/06-mnist-gan.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/06-mnist-gan/samples/fake_images-0000.png" beforeDir="false" afterPath="$PROJECT_DIR$/06-mnist-gan/samples/fake_images-0000.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/06-mnist-gan/samples/fake_images-0010.png" beforeDir="false" afterPath="$PROJECT_DIR$/06-mnist-gan/samples/fake_images-0010.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +40,13 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\VSD\learning-pytorch" />
+    </key>
   </component>
   <component name="RunManager" selected="Python.envcheck">
     <configuration name="envcheck" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
