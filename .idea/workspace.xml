@@ -5,24 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="216d00c6-a449-4b05-8bce-de0df92b5574" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/LSTM/seq2seq_translation_tutorial.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LSTM/utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/annotated-transformer-master/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/annotated-transformer-master/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/annotated-transformer-master/The Annotated Transformer.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/annotated-transformer-master/acllatex.tpl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/annotated-transformer-master/images/ModalNet-19.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/annotated-transformer-master/images/ModalNet-20.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/annotated-transformer-master/images/ModalNet-21.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/annotated-transformer-master/images/aiayn.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/annotated-transformer-master/jekyll.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/annotated-transformer-master/jekyll.tpl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/annotated-transformer-master/writeup/acl2018.sty" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/annotated-transformer-master/writeup/acl_natbib.bst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/attention/The Annotated Transformer.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/05-cifar10-cnn/05-cifar10-cnn.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/05-cifar10-cnn/05-cifar10-cnn.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

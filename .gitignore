@@ -9,4 +9,6 @@ data/
 *.pth
 *.ckpt
 samples/
+*.pth.tar
+
 
