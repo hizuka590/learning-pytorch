@@ -5,16 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="216d00c6-a449-4b05-8bce-de0df92b5574" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/vision_transformer/cat.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vision_transformer/classes.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vision_transformer/custom.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vision_transformer/forward.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vision_transformer/verify.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LSTM/seq2seq_translation_tutorial.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LSTM/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/annotated-transformer-master/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/annotated-transformer-master/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/annotated-transformer-master/The Annotated Transformer.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/annotated-transformer-master/acllatex.tpl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/annotated-transformer-master/images/ModalNet-19.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/annotated-transformer-master/images/ModalNet-20.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/annotated-transformer-master/images/ModalNet-21.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/annotated-transformer-master/images/aiayn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/annotated-transformer-master/jekyll.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/annotated-transformer-master/jekyll.tpl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/annotated-transformer-master/writeup/acl2018.sty" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/annotated-transformer-master/writeup/acl_natbib.bst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/attention/The Annotated Transformer.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/06-mnist-gan/06-mnist-gan.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/06-mnist-gan/06-mnist-gan.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/06-mnist-gan/samples/fake_images-0000.png" beforeDir="false" afterPath="$PROJECT_DIR$/06-mnist-gan/samples/fake_images-0000.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/06-mnist-gan/samples/fake_images-0010.png" beforeDir="false" afterPath="$PROJECT_DIR$/06-mnist-gan/samples/fake_images-0010.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/05-cifar10-cnn/05-cifar10-cnn.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/05-cifar10-cnn/05-cifar10-cnn.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,15 +48,17 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/LSTM" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\VSD\learning-pytorch\LSTM" />
       <recent name="D:\VSD\learning-pytorch" />
+      <recent name="D:\VSD\learning-pytorch\attention" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.envcheck">
+  <component name="RunManager" selected="Python.seq2seq">
     <configuration name="envcheck" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -91,8 +101,30 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="seq2seq" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/LSTM" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LSTM/seq2seq.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.seq2seq" />
         <item itemvalue="Python.envcheck" />
       </list>
     </recent_temporary>

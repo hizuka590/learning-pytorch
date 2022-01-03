@@ -5,6 +5,7 @@
 data/
 *.tgz
 *.tgz.gz
+*.zip
 *.pth
 *.ckpt
 samples/
