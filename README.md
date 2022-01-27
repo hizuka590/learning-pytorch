@@ -11,3 +11,4 @@ original source: https://jovian.ai/aakashns
 * 05-cifar10-cnn
 * 05b-cifar10-resnet
 * 06-mnist-gan
+* 07-transfer-learning
