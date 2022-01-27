@@ -1,6 +1,6 @@
 # learning-pytorch
 play with pytorch
-
+--
 original source: https://jovian.ai/aakashns
 * 01-pytorch-basics
 * 02-insurance-linear-regression
@@ -12,3 +12,10 @@ original source: https://jovian.ai/aakashns
 * 05b-cifar10-resnet
 * 06-mnist-gan
 * 07-transfer-learning
+
+Reimplementation of different network structures
+--
+learning-pytorch/Pytorch/Basics/
+* fully connected net: 
+* cnn
+* rnn
