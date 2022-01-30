@@ -1,8 +1,9 @@
 """
 Example code of a simple RNN, naive implementation
+input an image line by line into a RNN
 
 Programmed by hizuka <duanxin@connect.hku.hk>
-*    2020-05-09 Initial coding
+*    2022-01-28 Initial coding
 
 """
 
@@ -22,13 +23,13 @@ from tqdm import tqdm  # For a nice progress bar!
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # Hyperparameters
-input_size = 784
+input_size = 28 # 784 is wrong because other image will not effect label y for single inmage x in a catch
 hidden_size = 256
 num_classes = 10
 learning_rate = 0.0005
-batch_size = 64
-num_epochs = 300
-pilot_steps = 100
+batch_size = 100#256,64 is unusable because the final emulator will got only the remaining input of size 6000
+num_epochs = 5
+pilot_steps = 5
 
 # Recurrent neural network (many-to-one)
 class RNN(nn.Module):
@@ -40,16 +41,17 @@ class RNN(nn.Module):
         # self.fc = nn.Linear(hidden_size * sequence_length, num_classes)
         self.i2h = nn.Linear(input_size+hidden_size,hidden_size)
         self.i2o = nn.Linear(input_size+hidden_size,num_classes)
-        self.softmax = nn.LogSoftmax(dim = 1)
+        self.softmax = nn.Softmax(dim = 1)
 
 
     def forward(self, input_tensor, hiddent_tensor):
-        # print("forward fuction===: input_tensor.shape, hidden_tensor.shape",input_tensor.shape, hiddent_tensor.shape)
+        # print("\nforward function===: input_tensor.shape, hidden_tensor.shape",input_tensor.shape, hiddent_tensor.shape)
         combined = torch.cat((input_tensor,hiddent_tensor),1)
         # print("combined tensor.shape: ",combined.shape)
         hidden = self.i2h(combined)
         output = self.i2o(combined)
         output = self.softmax(output)
+        # print("\nforward function return ===: output.shape, hidden.shape", output.shape, hidden.shape,output)
         return output,hidden
 
         # # Forward propagate LSTM
@@ -59,12 +61,13 @@ class RNN(nn.Module):
         # # Decode the hidden state of the last time step
         # out = self.fc(out)
         # return out
-    def init_hidden(self,batch_size):
-        return torch.ones(1,self.hidden_size)
+    def init_hidden(self):
+        return torch.zeros(1,self.hidden_size)
 
 
 # Load Data
 train_dataset = datasets.MNIST(root="dataset/", train=True, transform=transforms.ToTensor(), download=False)
+print(len(train_dataset))
 test_dataset = datasets.MNIST(root="dataset/", train=False, transform=transforms.ToTensor(), download=False)
 train_loader = DataLoader(dataset=train_dataset, batch_size=batch_size, shuffle=True)
 test_loader = DataLoader(dataset=test_dataset, batch_size=batch_size, shuffle=True)
@@ -91,12 +94,17 @@ optimizer = optim.Adam(model.parameters(), lr=learning_rate)
 #
 # # Train Network
 def train(input,output_y):
-    hidden_tensor = model.init_hidden(batch_size)
-    # print("train=====input.shape hidden.shape output.shape", input.shape,hidden_tensor.shape, output_y.shape)
+    hidden_tensor = model.init_hidden()
+    # print("\ntrain=====input.shape hidden.shape output.shape", input.shape,hidden_tensor.shape, output_y.shape)
     hidden_tensor = hidden_tensor.to(device)
-    output = torch.zeros(input.shape[0])
+    output = torch.zeros(input.shape[0],num_classes)
     for i in range(input.shape[0]):
-        output[i],hidden = model(input_tensor[i].reshape(1,-1),hidden_tensor)
+        for slide in range(0,28):
+            output[i], hidden_tensor = model(input_tensor[i][(slide*28):(28*(1+slide))].reshape(1, -1), hidden_tensor)
+
+
+
+    output  = output.to(device)
     loss = criterion(output , output_y)
     optimizer.zero_grad()
     loss.backward()
@@ -113,10 +121,11 @@ for epoch in range(num_epochs):
         input_tensor = data.reshape(batch_size, -1).to(device)
 
         output, loss = train(input_tensor, targets)
-        current_loss += loss
-        if (epoch+1)%pilot_steps == 0:
-            losses.append(current_loss / pilot_steps) #average
-            current_loss = 0
+        losses.append(loss)
+        # current_loss += loss
+        # if (epoch+1)%pilot_steps == 0:
+        #     losses.append(current_loss / pilot_steps) #average
+        #     current_loss = 0
         # break
 
 plt.figure()
