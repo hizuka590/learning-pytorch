@@ -127,35 +127,15 @@ for epoch in range(num_epochs):
         #     losses.append(current_loss / pilot_steps) #average
         #     current_loss = 0
         # break
-
+torch.save(model,"model.pth")
 plt.figure()
 plt.plot(losses)
 plt.show()
 
 
 #
-# # Check accuracy on training & test to see how good our model
-# def check_accuracy(loader, model):
-#     num_correct = 0
-#     num_samples = 0
-#
-#     # Set model to eval
-#     model.eval()
-#
-#     with torch.no_grad():
-#         for x, y in loader:
-#             x = x.to(device=device).squeeze(1)
-#             y = y.to(device=device)
-#
-#             scores = model(x)
-#             _, predictions = scores.max(1)
-#             num_correct += (predictions == y).sum()
-#             num_samples += predictions.size(0)
-#
-#     # Toggle model back to train
-#     model.train()
-#     return num_correct / num_samples
-#
+# Check accuracy on training & test to see how good our model
+
 #
 # print(f"Accuracy on training set: {check_accuracy(train_loader, model)*100:2f}")
 # print(f"Accuracy on test set: {check_accuracy(test_loader, model)*100:.2f}")

@@ -22,10 +22,11 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # Hyperparameters
 input_size = 28
-hidden_size = 256
-num_layers = 2
-num_classes = 10
 sequence_length = 28
+hidden_size = 256
+num_layers = 1
+num_classes = 10
+
 learning_rate = 0.0005
 batch_size = 64
 num_epochs = 3
@@ -44,8 +45,11 @@ class RNN(nn.Module):
         h0 = torch.zeros(self.num_layers, x.size(0), self.hidden_size).to(device)
 
         # Forward propagate LSTM
-        out, _ = self.rnn(x, h0)
+        out, hidden = self.rnn(x, h0)
+        #out.shape: batch,seq_length,hidden_size
+        # print("===forward===:\nx.shape={},out.shape={},hidden.shape={}", x.shape, out.shape, hidden.shape)
         out = out.reshape(out.shape[0], -1)
+        # print("===forward===:\nx.shape={},out.shape={},hidden.shape={}", x.shape,out.shape,hidden.shape)
 
         # Decode the hidden state of the last time step
         out = self.fc(out)
@@ -106,6 +110,7 @@ train_loader = DataLoader(dataset=train_dataset, batch_size=batch_size, shuffle=
 test_loader = DataLoader(dataset=test_dataset, batch_size=batch_size, shuffle=True)
 
 # Initialize network (try out just using simple RNN, or GRU, and then compare with LSTM)
+print("===RNN===\ninputsize:{},hiddensize:{},num_layers:{},num_classes:{}",input_size,hidden_size,num_layers,num_classes)
 model = RNN_LSTM(input_size, hidden_size, num_layers, num_classes).to(device)
 
 # Loss and optimizer
@@ -117,6 +122,7 @@ for epoch in range(num_epochs):
     for batch_idx, (data, targets) in enumerate(tqdm(train_loader)):
         # Get data to cuda if possible
         data = data.to(device=device).squeeze(1)
+        # print(data.shape)
         targets = targets.to(device=device)
 
         # forward
@@ -129,6 +135,8 @@ for epoch in range(num_epochs):
 
         # gradient descent update step/adam step
         optimizer.step()
+
+
 
 # Check accuracy on training & test to see how good our model
 def check_accuracy(loader, model):
@@ -155,3 +163,12 @@ def check_accuracy(loader, model):
 
 print(f"Accuracy on training set: {check_accuracy(train_loader, model)*100:2f}")
 print(f"Accuracy on test set: {check_accuracy(test_loader, model)*100:.2f}")
+# RNN
+# Accuracy on training set: 97.446671
+# Accuracy on test set: 97.17
+#GRU
+# Accuracy on training set: 98.753334
+# Accuracy on test set: 98.52
+#LSTM
+# Accuracy on training set: 98.521667
+# Accuracy on test set: 98.19
