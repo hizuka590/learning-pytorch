@@ -29,7 +29,7 @@ num_classes = 10
 
 learning_rate = 0.0005
 batch_size = 64
-num_epochs = 3
+num_epochs = 100
 
 # Recurrent neural network (many-to-one)
 class RNN(nn.Module):
@@ -111,7 +111,7 @@ test_loader = DataLoader(dataset=test_dataset, batch_size=batch_size, shuffle=Tr
 
 # Initialize network (try out just using simple RNN, or GRU, and then compare with LSTM)
 print("===RNN===\ninputsize:{},hiddensize:{},num_layers:{},num_classes:{}",input_size,hidden_size,num_layers,num_classes)
-model = RNN_LSTM(input_size, hidden_size, num_layers, num_classes).to(device)
+model = RNN(input_size, hidden_size, num_layers, num_classes).to(device)
 
 # Loss and optimizer
 criterion = nn.CrossEntropyLoss()
